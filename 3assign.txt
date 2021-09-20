@@ -1,0 +1,3 @@
+1.SELECT person.pname,kids.kname from kids,person,person INNER JOIN works_on ON person.pno=works_on.pno WHERE dno=1 AND prno=1 AND person.pno=kids.pno;
+2.SELECT p.pname,p.bdate,p.address,proj.pname FROM person p JOIN works_on w ON p.pno=w.pno JOIN proj ON w.prno=proj.pname ORDER BY proj.prno;
+3.SELECT p.pname,p.bdate,p.address,sup.pname AS 'supervisor grade',e.grade AS 'supervisor grade' FROM person p LEFT JOIN person sup ON p.pnosup=p.pno JOIN employ e ON sup.pno=e.pno WHERE p.pnosup is NOT NULL;
